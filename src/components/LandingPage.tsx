@@ -41,7 +41,7 @@ flowchart TD
 
                 </nav>
                 <div className="flex gap-4">
-                    <Link href="/signup">
+                    <Link href="/home">
                         <Button>Get Started</Button>
                     </Link>
                 </div>
@@ -72,6 +72,11 @@ flowchart TD
                                             Watch Demo
                                         </Button>
                                     </Link>
+                                </div>
+                            </div>
+                            <div className="flex items-center justify-center w-f">
+                                <div className=" w-full h-[500px] md:h-[500px] lg:h-[500px] xl:h-[500px] rounded-lg  border shadow-xl flex justify-center items-center">
+                                    <Mermaid chart={chart1} />
                                 </div>
                             </div>
 
