@@ -8,7 +8,8 @@ import { validateApiUrl } from "@/utils/check"
 import { toast, ToastContainer } from "react-toastify"
 import { ProjectsTypes } from "@/types"
 import Projects from "./Projects"
-import { LogOut, Code, Loader2 } from "lucide-react"
+import { Code, Loader2 } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 export default function Home() {
     const { token, removetoken } = useStore()
@@ -17,6 +18,7 @@ export default function Home() {
     const [project, setproject] = useState<ProjectsTypes[]>()
     const [loading, setloading] = useState<boolean>(false)
     const isLoggedIn = !!token
+    const navigate = useRouter()
 
     const placeholders = [
         "Paste a public API URL (e.g., https://api.spacexdata.com)",
@@ -60,6 +62,7 @@ export default function Home() {
         console.log("click")
         setShowLogin(false)
         removetoken()
+        navigate.push("/")
     }
 
     return (
