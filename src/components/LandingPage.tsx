@@ -35,9 +35,7 @@ flowchart TD
                     <Link href="#how-it-works" className="text-sm font-medium hover:underline underline-offset-4">
                         How It Works
                     </Link>
-                    <Link href="#testimonials" className="text-sm font-medium hover:underline underline-offset-4">
-                        Testimonials
-                    </Link>
+
 
                 </nav>
                 <div className="flex gap-4">
@@ -61,13 +59,13 @@ flowchart TD
                                     </p>
                                 </div>
                                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                                    <Link href="/explore">
+                                    <Link href="/home">
                                         <Button size="lg" className="gap-1">
                                             <Compass className="h-4 w-4" />
                                             Start Exploring
                                         </Button>
                                     </Link>
-                                    <Link href="/demo">
+                                    <Link href="/home">
                                         <Button size="lg" variant="outline">
                                             Watch Demo
                                         </Button>
@@ -191,71 +189,7 @@ flowchart TD
                     </div>
                 </section>
 
-                <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-                    <div className="container px-4 md:px-6">
-                        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                            <div className="space-y-2">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Loved by Developers</h2>
-                                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                    See what developers are saying about how APIIdea has transformed their workflow.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3">
-                            <div className="flex flex-col justify-between rounded-lg border bg-background p-6 shadow-sm">
-                                <div className="space-y-4">
-                                    <p className="text-muted-foreground">
-                                        "APIIdea helped me discover creative ways to use the Stripe API that I hadn't considered before.
-                                        It's like having an API expert on your team."
-                                    </p>
-                                </div>
-                                <div className="flex items-center gap-4 pt-4">
-                                    <div className="rounded-full bg-muted p-1">
-                                        <div className="h-8 w-8 rounded-full bg-gray-200" />
-                                    </div>
-                                    <div>
-                                        <p className="text-sm font-medium">Sarah Chen</p>
-                                        <p className="text-xs text-muted-foreground">Frontend Developer</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="flex flex-col justify-between rounded-lg border bg-background p-6 shadow-sm">
-                                <div className="space-y-4">
-                                    <p className="text-muted-foreground">
-                                        "I was stuck trying to figure out what to build for my portfolio. APIIdea gave me dozens of project
-                                        ideas that showcase my skills using public APIs."
-                                    </p>
-                                </div>
-                                <div className="flex items-center gap-4 pt-4">
-                                    <div className="rounded-full bg-muted p-1">
-                                        <div className="h-8 w-8 rounded-full bg-gray-200" />
-                                    </div>
-                                    <div>
-                                        <p className="text-sm font-medium">Marcus Johnson</p>
-                                        <p className="text-xs text-muted-foreground">Full Stack Developer</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="flex flex-col justify-between rounded-lg border bg-background p-6 shadow-sm">
-                                <div className="space-y-4">
-                                    <p className="text-muted-foreground">
-                                        "As a product manager, APIIdea helps me understand the technical possibilities of integrating with
-                                        partner APIs before I even talk to my engineering team."
-                                    </p>
-                                </div>
-                                <div className="flex items-center gap-4 pt-4">
-                                    <div className="rounded-full bg-muted p-1">
-                                        <div className="h-8 w-8 rounded-full bg-gray-200" />
-                                    </div>
-                                    <div>
-                                        <p className="text-sm font-medium">Priya Patel</p>
-                                        <p className="text-xs text-muted-foreground">Product Manager</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+
 
 
                 <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">

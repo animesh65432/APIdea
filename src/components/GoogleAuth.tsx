@@ -29,7 +29,7 @@ export default function GoogleAuth({ setShowLogin }: Props) {
     }
     return (
         <div className="h-screen flex justify-center items-center">
-            <Card className="w-full max-w-md shadow-xl rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-gray-700">
+            <Card className="w-[90vw] max-w-md shadow-xl rounded-2xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-gray-700">
                 <CardHeader>
                     <CardTitle className="text-center text-2xl font-bold text-gray-800 dark:text-white">
                         Sign in with Google

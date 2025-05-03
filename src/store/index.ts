@@ -23,6 +23,7 @@ export const useStore = create<StoreTypes>((set) => ({
     },
     removetoken: () => {
         if (typeof window !== "undefined") {
+            console.log("click")
             localStorage.removeItem("token");
         }
         set({ token: "" });
