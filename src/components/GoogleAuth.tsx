@@ -9,7 +9,8 @@ import {
 import { GoogleLogin, CredentialResponse } from "@react-oauth/google"
 import { loginwithgoogle } from "@/api/Users"
 import { useStore } from "@/store"
-import React from "react"
+import React, { useState } from "react"
+import { Loader2 } from "lucide-react"
 
 type Props = {
     setShowLogin: React.Dispatch<React.SetStateAction<boolean>>
@@ -17,7 +18,9 @@ type Props = {
 
 export default function GoogleAuth({ setShowLogin }: Props) {
     const { addtoken } = useStore()
+    const [loading, setloading] = useState<boolean>(false)
     const handleLoginSuccess = async (credentialResponse: CredentialResponse) => {
+        setloading(true)
         try {
             const res = await loginwithgoogle(credentialResponse.clientId as string, credentialResponse.credential as string) as { message: string, token: string }
             addtoken(res.token)
@@ -25,6 +28,9 @@ export default function GoogleAuth({ setShowLogin }: Props) {
         }
         catch {
             setShowLogin(false)
+        }
+        finally {
+            setloading(false)
         }
     }
     return (
@@ -39,11 +45,11 @@ export default function GoogleAuth({ setShowLogin }: Props) {
                     </CardDescription>
                 </CardHeader>
                 <CardContent className="flex justify-center py-6">
-                    <GoogleLogin
+                    {loading ? <Loader2 className="animate-spin h-5 w-5" /> : <GoogleLogin
                         onSuccess={(credentialResponse) => {
                             handleLoginSuccess(credentialResponse)
                         }}
-                    />
+                    />}
                 </CardContent>
                 <CardFooter className="justify-center text-sm text-gray-400 dark:text-gray-500">
                     We do not store your personal data.
